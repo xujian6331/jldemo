@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		
+		.clearfix::after {
+		    content: '';
+		    display: block;
+		    clear: both;
+		}
+		.father{
+			border: 1px solid grey;
+		}
+		.brother1{
+			border: 1px solid red;
+			width: 100px;
+				float: left; 
+		}
+		
+		.brother2{border: 1px solid green;
+			width: 100px; 
+			float: left; 
+		}
+		.brother3{border: 1px solid black;
+			width: 100px;
+			float: left; 
+		}
+		.brother4{border: 1px solid yellow;
+			width:100px;
+			/* float: left; */
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="father clearfix">
+		<div class="brother1 ">brother1</div>
+		<div class="brother2">brother2</div>
+		<div class="brother3">brother3</div>
+		
+	</div>
+	<div class="brother4">brother4</div>
+</body>
+</html>
