@@ -139,11 +139,35 @@ nav>a:hover{
  h1{
  	margin-bottom: 10px;
  }
- footer{
+ footer {
  	background:#e6686a;
- 	height: 70px;
+ 	
  	max-width: 940px;
  	margin-left: auto;
  	margin-right: auto;
+ 	text-align:center; 
+ }
+ 
+ footer>a {
+	
+	text-decoration: none;
+	display:inline-block;
+	width: 45px;
+	padding: 5px;
+	line-height: 30px;
+	border-radius: 50%;
+	margin:16px;
+ }
+ footer>a:hover{
+ 	background: #cf5d5f;
+ }
+ footer a .icon{
+ 	width: 30px;
+ 	height: 30px;
+ 	fill: white;
+ 	margin:0 0;
+
+ 	
+
  }
 
