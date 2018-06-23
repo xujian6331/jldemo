@@ -76,12 +76,12 @@ nav>a:hover{
 	background-color:rgba(0,0,0,0.8);
 }
 .usercart{
-	border: 1px solid red;
 	max-width: 940px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #ffffff;
 	color: black;
+	box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.49);
 	
 }
  .usercart .we {
@@ -170,4 +170,77 @@ nav>a:hover{
  	
 
  }
+ body{background:rgb(239,239,239);}
+body main{
+	margin-top: -340px;
+}
 
+body > main .downloadJianli{
+ 	 border: 1px solid #cddfd1;
+ 	  padding: 21px 55px;
+ 	  display:inline-block;
+ 	  background: #efefef;font-size:15px;
+ 	  font-weight: bold;border-radius: 2px;
+ 	  text-decoration: none;
+ 	  color: #3d4451;
+ 	  transition: box-shadow 0.5s;
+ 	  
+ }
+ body > main .downloadJianli:hover{
+ 	box-shadow: 0px 3px 12px 1px rgba(0,0,0,0.49);
+
+ }
+ body > main .downloadJianli-f{
+ 	text-align: center; margin:32px 0px;
+
+ }
+.self{max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	font-family: "楷体";
+}
+.jineng{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto ;
+	margin-top: 70px;
+}
+.jineng > h2{
+	text-align:center;
+}
+.jineng > ol{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+	color: black;
+	box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.49);
+	list-style: none;
+	padding:42px 50px 30px;
+	margin-top: 34px;
+}
+section ol li{
+	float: left;
+	width: 46%;
+	
+}
+section ol li:nth-child(even){
+	float: right;
+}
+
+.jindutiao{
+	height: 5px;
+	background: #FAE1E1;
+	margin-bottom: 40px;
+}
+.jindu{
+	height:3px;
+	background:red;
+	width: 70%;
+}
+h3{
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
