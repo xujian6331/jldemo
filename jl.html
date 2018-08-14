@@ -16,19 +16,37 @@
 
 	
 </head>
-<body ">
-	<div class="top clearfix">
-		<a href="#"class="logo">
+<body >
+	<div id='siteWel' class="siteWelcome active">
+		<div class="circle"></div>
+	</div>
+	<div id="topnav" class="top clearfix">
+		<a href="#" class="logo">
 			<span class="rs" >Jian</span><span class="logo-cart">Xu</span>
 		</a>
-		<nav class="navbar">
-				<a href="#">关于</a>
-			    <a href="#">技能</a>
-			    <a href="#">作品</a>
-			    <a href="#">博客</a>
-				<a href="#">日历</a>
-				<a href="#">联系方式</a>
-				<a href="#">其它</a>
+		<nav  class="navbar ">
+			<ul>
+				<li class="navbar11"><a   href="#about" >关于</a></li>
+			    <li class="navbar11"><a   href="#jineng" >技能</a></li>
+			    <li class="navbar11">
+			    	<a href="#" >作品</a> 
+			    	<ul class="submenu">
+			    		<li><a href="https://xujian6331.github.io/nav-test/k.html">作品1</a></li>
+			    		<li><a href="https://xujian6331.github.io/canvasDemo2/can.html">作品2</a></li>
+			    		
+			    	</ul> 
+			    	
+
+			    </li>
+			    <li class="navbar11">
+			    	<a href="#" >博客</a>
+			    	
+
+			    </li>
+				<li class="navbar11"><a href="#" >日历</a></li>
+				<li class="navbar11"><a href="#" >联系方式</a></li>
+				<li class="navbar11"><a href="#" >其它</a></li>
+			</ul>
 		</nav>
 	</div>
 	
@@ -38,7 +56,7 @@
 	
 	
 	<main>
-		<div class="usercart clearfix">
+		<div id='about' date-c class="usercart clearfix">
 			<div class="picture" >
 			  <img src="./img/avatar.jpg" alt="头像">
 		    </div>
@@ -86,7 +104,7 @@
 		</p>
 		<p class="self">徐建 副总工程师 现就职于北京某国企集团科技公司。技术特长 熟悉JAVA EE编程，前端WEB技术,node.js编程。对物联网技术比较<br><br>熟练掌握，工作经验10年以上。 </p>
 	</main>
-	<section class="jineng" style="color: black;">
+	<section date-c id='jineng'class="jineng" style="color: black;">
 		<h2>技&nbsp;能</h2>
 		<ol class="clearfix">
 			<li><h3>HTML5 &amp; CSS3 </h3>
@@ -121,6 +139,84 @@
 			    </div>
 			</li>
 		</ol>
-	</section>
+		</section>
+		<div class="text99">
+			
+			
+		</div>
+	<script>
+		setTimeout(function(){
+			siteWel.classList.remove('active')
+		},1000)
+
+	</script>
+	<script>
+
+		window.onscroll = function(){
+			if(scrollY>0){
+				topnav.classList.add("citie");
+				
+				
+			}else{
+				topnav.classList.remove("citie")
+			}
+		}
+		
+		/*for(let i=1;i<specileTags.length;i++){
+			if((specileTags[i].offsetTop-specileTags[i].window.scroll)<(specileTags[index].offsetTop-specileTags[index].window.scroll))
+				minindex=i;
+		}*/
+		
+		
+		let aTags=document.querySelectorAll('nav>ul>li>a')
+		for(let i=0 ;i<aTags.length; i++){
+			aTags[i].onclick=function(x){
+				x.preventDefault();
+				let a=x.currentTarget;
+				let href=a.getAttribute('href');
+				let element22=document.querySelector(href);
+				let targetTop=element22.offsetTop;
+				window.scroll(0,top-100);
+				let currentTop=window.scrollY;
+				let n=25;
+				let i=0;
+				let duration=1000/n;
+				let distance=(targetTop-currentTop)/n;
+				
+				let id=setInterval(()=>{
+					
+					if(i===n){
+						window.clearInterval(id)
+						return;
+					}
+					 i=i+1;
+					window.scrollTo(0,currentTop+distance*i-100)
+					
+				},duration)
+			}
+		}
+		
+		
+		
+	</script>
+	<script>
+		
+		let specileTags=document.querySelectorAll('[date-c]');	
+		console.log(specileTags);	
+		let minIndex=0;
+		
+		for(let i=1;i<specileTags.length;i++){
+			if(Math.abs(specileTags[i].offsetTop-window.scrollY)<Math.abs(specileTags[minIndex].offsetTop-window.scrollY)){
+			minIndex=i;
+			
+		    }
+	    }
+		let id = specileTags[minIndex].id ;
+		console.log(id);
+		let a = document.querySelector('a[href="#'+id+'"]');
+		a.classList.add('active')
+		
+
+	</script>
 </body>
 </html>

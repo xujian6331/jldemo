@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级菜单</title>
+	<style>
+	a{
+		display: block;
+	}
+		.frent{
+			float: left;
+			margin:30px;
+		}
+		.child{
+			display: none;
+			background: red;
+			width: 50px;
+		}
+
+		.frent:hover .child{
+			display: block;
+			
+		}
+		/* .main{float: left;} */
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div href="#" id="frent" class="frent">产品
+		<div id="child" class="child"><a href="#" >产品1</a></div>
+		<div id="child" class="child"><a  href="#" >产品2</a></div>
+
+		</div>
+		<div href="#" id="frent" class="frent">作品
+		<div id="child" class="child"><a href="#" >作品1</a></div>
+		<div id="child" class="child"><a  href="#" >作品2</a></div>
+		
+		</div>
+	</div>
+	<script>
+		
+	</script>
+</body>
+</html>

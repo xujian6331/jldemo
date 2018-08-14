@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单</title>
+	<style>
+		ul>li{list-style: none;}
+		nav>ul>li{
+			float: left;
+			margin:20px;
+			position: relative;
+		}
+		
+		.submenu{
+			position: absolute;
+			left:-30px;
+			top:100%;
+			
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<nav >
+			<ul>
+				<li>
+					<a  class="aa" href="">关于</a>
+					<ul class="submenu">
+						<li class="zuop">作品1</li>
+						<li class="zuop">作品2</li>
+						<li class="zuop">作品3</li>
+					</ul>
+				</li>
+				<li><a href="">茶农</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
